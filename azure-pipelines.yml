@@ -1,18 +1,18 @@
-# trigger:
-# - master
+trigger:
+- master
 
 pool:
   vmImage: 'windows-2019'
 
 steps:
 
-# - task: CreateBlueprint@1
-#   inputs:
-#     ConnectedServiceName: 'nepeters-internal-managemet-group'
-#     BlueprintName: 'blueprints-demo'
-#     BlueprintPath: './create/blueprint-body.json'
-#     ArtifactsPath: './create/artifacts'
-#     PublishBlueprint: true
+- task: CreateBlueprint@1
+  inputs:
+    ConnectedServiceName: 'nepeters-internal-managemet-group'
+    BlueprintName: 'blueprints-demo'
+    BlueprintPath: './create/blueprint-body.json'
+    ArtifactsPath: './create/artifacts'
+    PublishBlueprint: true
 
 - task: AssignBlueprint@1
   inputs:
