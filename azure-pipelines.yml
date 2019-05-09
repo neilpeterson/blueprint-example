@@ -6,17 +6,19 @@ pool:
 
 steps:
 
+
 - task: CreateBlueprint@1
   inputs:
-    ConnectedServiceName: 'nepeters-internal-managemet-group'
-    BlueprintName: 'blueprints-demo-two'
+    azureSubscription: 'nepeters-internal-managemet-group'
+    BlueprintName: 'testing-version-ux'
     BlueprintPath: './create/blueprint-body.json'
     ArtifactsPath: './create/artifacts'
     PublishBlueprint: true
+    Version: 'testing-version-ux'
 
 - task: AssignBlueprint@1
   inputs:
     ConnectedServiceName: 'nepeters-internal-managemet-group'
-    BlueprintName: 'blueprints-demo-two'
+    BlueprintName: 'testing-version-ux'
     ParametersFile: './assign/assign-blueprint.json'
     SubscriptionID: '3762d87c-ddb8-425f-b2fc-29e5e859edaf'
