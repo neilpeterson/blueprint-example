@@ -13,6 +13,7 @@ steps:
     BlueprintPath: './create/blueprint-body.json'
     ArtifactsPath: './create/artifacts'
     PublishBlueprint: true
+    Version: 'test-version-two'
 
 - task: AssignBlueprint@1
   inputs:
