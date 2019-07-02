@@ -6,9 +6,6 @@
         "resourceGroups": {
             "blueprint-demo-one": {
                 "description": "Contains the resource template deployment and a role assignment."
-            },
-            "blueprint-demo-two": {
-                "description": "Contains the resource template deployment and a role assignment."
             }
         }
     }
