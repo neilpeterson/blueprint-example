@@ -7,12 +7,13 @@
 			"parameters": {},
 			"variables": {
 				"storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]",
+				"storageAccountNameFAIL": "INVALIDNAME-01",
 				"storageAccountType": "Standard_LRS",
 				"location": "[resourceGroup().location]"
 			},
 			"resources": [{
 				"type": "Microsoft.Storage/storageAccounts",
-				"name": "[variables('storageAccountName')]",
+				"name": "[variables('storageAccountNameFAIL')]",
 				"location": "[variables('location')]",
 				"apiVersion": "2018-07-01",
 				"sku": {
@@ -28,7 +29,7 @@
 				}
 			}
 		},
-		"resourceGroup": "blueprint-demo-one",
+		"resourceGroup": "blueprint-demo",
 		"parameters": {}
 	}
 }
