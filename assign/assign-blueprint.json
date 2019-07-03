@@ -5,14 +5,13 @@
 	"location": "eastus",
 	"properties": {
 		"description": "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-		"blueprintId": "",
+		"blueprintId": "/providers/Microsoft.Management/managementGroups/nepeters-internal/providers/Microsoft.Blueprint/blueprints/test-pipeline",
 		"resourceGroups": {
 			"blueprint-demo-one": {
 				"name": "blueprint-demo-one",
 				"location": "eastus"
 			}
 		},
-		"parameters": {
-		}
+		"parameters": {}
 	}
 }
