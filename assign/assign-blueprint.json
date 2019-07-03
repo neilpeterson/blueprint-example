@@ -7,7 +7,7 @@
     "description": "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
     "blueprintId": "",
     "resourceGroups": {
-      "blueprint-demo-one": {
+      "blueprint-demo": {
         "name": "blueprint-demo",
         "location": "eastus"
       }
