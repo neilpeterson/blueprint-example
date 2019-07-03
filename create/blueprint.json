@@ -1,6 +1,6 @@
 {
     "properties": {
-        "description": "Azure Pipelines Demo Two.",
+        "description": "Azure Pipelines Demo.",
         "targetScope": "subscription",
         "parameters": { },
         "resourceGroups": {
