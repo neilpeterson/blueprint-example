@@ -11,5 +11,6 @@ jobs:
       - name: Sample Container Action
         uses: neilpeterson/my-first-github-action/create-blueprint@master
         with:
+          azureManagementGroupName: nepeters-internal
           blueprintName: actionTest
           blueprintPath: ./create/blueprint.json
