@@ -10,11 +10,11 @@ jobs:
 
       - name: Sample Container Action
         env:
-          AZURESERVICEPRINCIPALID: ${{ secrets.INPUT_AZURESERVICEPRINCIPALID }}
-          AZURESERVICEPRINCIPALPASSWORD: ${{ secrets.INPUT_AZURESERVICEPRINCIPALPASSWORD }}
-          AZURETENANTID: ${{ secrets.INPUT_AZURETENANTID }}
+          AZURETENANTID: ${{ secrets.AZURETENANTID }}
+          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/my-first-github-action/create-blueprint@master
         with:
-          azureManagementGroupName: nepeters-internal2
-          blueprintName: actionTest2
+          azureManagementGroupName: nepeters-internal
+          blueprintName: actionTest
           blueprintPath: ./create/blueprint.json
