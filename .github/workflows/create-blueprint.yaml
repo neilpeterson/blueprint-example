@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-
-      - name: Create Azure Blueprint 2
-        env:
-          AZURETENANTID: ${{ secrets.AZURETENANTID }}
-          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
-          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-        uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
-        with:
-          azureManagementGroupName: nepeters-internal
-          blueprintName: actionTest
-          blueprintPath: ./create
+      - run: ls ./create
+      # - name: Create Azure Blueprint 2
+      #   env:
+      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
+      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+      #   uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
+      #   with:
+      #     azureManagementGroupName: nepeters-internal
+      #     blueprintName: actionTest
+      #     blueprintPath: ./create
