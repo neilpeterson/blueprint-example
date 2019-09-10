@@ -13,8 +13,8 @@ jobs:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-        uses: neilpeterson/my-first-github-action/create-blueprint@master
+        uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
         with:
           azureManagementGroupName: nepeters-internal
-          blueprintName: actionTest2
+          blueprintName: actionTest
           blueprintPath: ./create/blueprint.json
