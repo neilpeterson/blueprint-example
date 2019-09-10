@@ -4,11 +4,11 @@
   },
   "location": "eastus",
   "properties": {
-    "description": "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
+    "description": "TWO enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
     "blueprintId": "",
     "resourceGroups": {
       "blueprint-demo": {
-        "name": "blueprint-demo",
+        "name": "blueprint-demo-two",
         "location": "eastus"
       }
     },

@@ -8,21 +8,32 @@
  #>
 
  param (
-    [string]$SubscriptionId,
-    [string]$ManagementGroup,
-    [string]$BlueprintName,
-    [string]$BlueprintAssignmentPath,
-    [bool]$Wait
+    [string]$SubscriptionId='3762d87c-ddb8-425f-b2fc-29e5e859edaf',
+    [string]$ManagementGroup='nepeters-internal',
+    [string]$BlueprintName='demo-test-001',
+    [string]$AssignmentName='demo-test-001-assignment-two',
+    [string]$BlueprintAssignmentPath='./assign/assign-blueprint.json',
+    [bool]$Wait,
+    [string]$BlueprintVersion='4'
 )
 
-$BluePrintObject = Get-AzBlueprint -Name $BlueprintName -ManagementGroupId $ManagementGroup
+if ($BlueprintVersion -eq 'latest') {
+   $BluePrintObject = Get-AzBlueprint -Name $BlueprintName -ManagementGroupId $ManagementGroup
+} else {
+   $BluePrintObject = Get-AzBlueprint -Name $BlueprintName -ManagementGroupId $ManagementGroup -Version $BlueprintVersion
+}
 
 # Add Blueprint ID
 $body = Get-Content -Raw -Path $BlueprintAssignmentPath | ConvertFrom-Json
 $body.properties.blueprintId = $BluePrintObject.id
 $body | ConvertTo-Json -Depth 4 | Out-File -FilePath $BlueprintAssignmentPath -Encoding utf8 -Force
 
-New-AzBlueprintAssignment -Name "storage-blueprint-fail" -Blueprint $BluePrintObject -AssignmentFile $BlueprintAssignmentPath -SubscriptionId $SubscriptionId
+# Check for assignment
+if (Get-AzBlueprintAssignment -Name $AssignmentName -SubscriptionId $SubscriptionId -erroraction 'silentlycontinue') {
+   Set-AzBlueprintAssignment -Name $AssignmentName -Blueprint $BluePrintObject -AssignmentFile $BlueprintAssignmentPath -SubscriptionId $SubscriptionId
+} else {
+   New-AzBlueprintAssignment -Name $AssignmentName -Blueprint $BluePrintObject -AssignmentFile $BlueprintAssignmentPath -SubscriptionId $SubscriptionId
+}
 
 if ($Wait -eq "true") {
    $timeout = new-timespan -Seconds 240
