@@ -17,4 +17,4 @@ jobs:
         with:
           azureManagementGroupName: nepeters-internal
           blueprintName: actionTest
-          blueprintPath: ./create/blueprint.json
+          blueprintPath: /github/workspace/create/blueprint.json
