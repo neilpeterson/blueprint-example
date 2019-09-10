@@ -15,6 +15,6 @@ jobs:
           INPUT_AZURETENANTID: ${{ secrets.INPUT_AZURETENANTID }}
         uses: neilpeterson/my-first-github-action/create-blueprint@master
         with:
-          azureManagementGroupName: nepeters-internal
+          azureManagementGroupName: nepeters-internal2
           blueprintName: actionTest
           blueprintPath: ./create/blueprint.json
