@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Sample Container Action
+      - name: Create Azure Blueprint
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
