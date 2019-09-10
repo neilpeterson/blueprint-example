@@ -10,9 +10,9 @@ jobs:
 
       - name: Sample Container Action
         env:
-          INPUT_AZURESERVICEPRINCIPALID: ${{ secrets.INPUT_AZURESERVICEPRINCIPALID }}
-          INPUT_AZURESERVICEPRINCIPALPASSWORD: ${{ secrets.INPUT_AZURESERVICEPRINCIPALPASSWORD }}
-          INPUT_AZURETENANTID: ${{ secrets.INPUT_AZURETENANTID }}
+          AZURESERVICEPRINCIPALID: ${{ secrets.INPUT_AZURESERVICEPRINCIPALID }}
+          AZURESERVICEPRINCIPALPASSWORD: ${{ secrets.INPUT_AZURESERVICEPRINCIPALPASSWORD }}
+          AZURETENANTID: ${{ secrets.INPUT_AZURETENANTID }}
         uses: neilpeterson/my-first-github-action/create-blueprint@master
         with:
           azureManagementGroupName: nepeters-internal2
