@@ -21,7 +21,7 @@ jobs:
           blueprintName: actionBlueprintPublish
           blueprintPath: ./create
 
-      - name: Assign Azure Blueprint 2
+      - name: Assign Azure Blueprint
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
