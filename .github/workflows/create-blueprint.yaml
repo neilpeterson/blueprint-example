@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - run: ls ./create
-      - name: Create Azure Blueprint 2
+
+      - name: Create Azure Blueprint
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
@@ -18,3 +20,17 @@ jobs:
           azureManagementGroupName: nepeters-internal
           blueprintName: actionBlueprintPublish
           blueprintPath: ./create
+
+      - name: Assign Azure Blueprint
+        env:
+          AZURETENANTID: ${{ secrets.AZURETENANTID }}
+          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+        uses: neilpeterson/azure-blueprint-actions/assign-blueprint@master
+        with:
+          AssignmentName: actionBlueprintPublish
+          azureManagementGroupName: nepeters-internal
+          blueprintName: actionBlueprintPublish
+          azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+          AssignmentFilePath: ./assign/assign-blueprint.json
+
