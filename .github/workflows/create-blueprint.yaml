@@ -16,5 +16,5 @@ jobs:
         uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
         with:
           azureManagementGroupName: nepeters-internal
-          blueprintName: actionTest001
-          blueprintPath: create/
+          blueprintName: actionTest002
+          blueprintPath: ./create/
