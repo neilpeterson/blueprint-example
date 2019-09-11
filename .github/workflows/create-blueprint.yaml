@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: ls ./create
-      - name: Create Azure Blueprint 2
+      - name: Create Azure Blueprint
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
@@ -16,5 +16,5 @@ jobs:
         uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
         with:
           azureManagementGroupName: nepeters-internal
-          blueprintName: actionTest
-          blueprintPath: create
+          blueprintName: actionTest001
+          blueprintPath: create/
