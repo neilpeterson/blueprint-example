@@ -11,16 +11,16 @@ jobs:
       - run: ls ./create
       - run: ls ./create
 
-      - name: Create Azure Blueprint
-        env:
-          AZURETENANTID: ${{ secrets.AZURETENANTID }}
-          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
-          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-        uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
-        with:
-          azureManagementGroupName: nepeters-internal
-          blueprintName: actionBlueprintPublish
-          blueprintPath: ./create
+      # - name: Create Azure Blueprint
+      #   env:
+      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
+      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+      #   uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
+      #   with:
+      #     azureManagementGroupName: nepeters-internal
+      #     blueprintName: actionBlueprintPublish
+      #     blueprintPath: ./create
 
       - name: Assign Azure Blueprint 2
         env:
