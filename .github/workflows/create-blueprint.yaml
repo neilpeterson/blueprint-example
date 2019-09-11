@@ -17,4 +17,4 @@ jobs:
         with:
           azureManagementGroupName: nepeters-internal
           blueprintName: actionBlueprintPublish
-          blueprintPath: create/
+          blueprintPath: ./create
