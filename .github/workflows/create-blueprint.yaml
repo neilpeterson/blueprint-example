@@ -15,9 +15,9 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-create-blueprint@master
         with:
-          azureManagementGroupName: nepeters-internal
+          scope: Subscription
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          blueprintName: actionBlueprintPublish005
+          blueprintName: actionBlueprintPublish900
           blueprintPath: ./create
           version: increment
 
@@ -28,9 +28,9 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-assign-blueprint@master
         with:
-          AssignmentName: actionBlueprintPublish
-          azureManagementGroupName: nepeters-internal
-          blueprintName: actionBlueprintPublish004
+          scope: subscription
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+          assignmentName: actionBlueprintPublish900
+          blueprintName: actionBlueprintPublish900
           AssignmentFilePath: ./assign/assign-blueprint.json
 
