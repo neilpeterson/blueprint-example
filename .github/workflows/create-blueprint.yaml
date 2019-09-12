@@ -8,30 +8,27 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - run: ls ./create
-      - run: ls ./create
-
-      # - name: Create Azure Blueprint
-      #   env:
-      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
-      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
-      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-      #   uses: neilpeterson/azure-blueprint-actions/create-blueprint@master
-      #   with:
-      #     azureManagementGroupName: nepeters-internal
-      #     blueprintName: actionBlueprintPublish
-      #     blueprintPath: ./create
-
-      - name: Assign Azure Blueprint 2
+      - name: Create Azure Blueprint
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-        uses: neilpeterson/azure-blueprint-actions/assign-blueprint@master
+        uses: neilpeterson/action-create-blueprint@master
         with:
-          AssignmentName: actionBlueprintPublish
           azureManagementGroupName: nepeters-internal
-          blueprintName: actionBlueprintPublish
-          azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          AssignmentFilePath: ./assign/assign-blueprint.json
+          blueprintName: actionBlueprintPublish001
+          blueprintPath: ./create
+
+      # - name: Assign Azure Blueprint
+      #   env:
+      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
+      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+      #   uses: neilpeterson/azure-blueprint-actions/assign-blueprint@master
+      #   with:
+      #     AssignmentName: actionBlueprintPublish
+      #     azureManagementGroupName: nepeters-internal
+      #     blueprintName: actionBlueprintPublish
+      #     azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+      #     AssignmentFilePath: ./assign/assign-blueprint.json
 
