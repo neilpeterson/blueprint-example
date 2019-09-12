@@ -15,11 +15,11 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-create-blueprint@master
         with:
-          creationScope: Subscription
+          azureManagementGroupName: nepeters-internal
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          blueprintName: actionBlueprintPublish002
+          blueprintName: actionBlueprintPublish003
           blueprintPath: ./create
-          publishBlueprint: false
+          version: v1
 
       # - name: Assign Azure Blueprint
       #   env:
