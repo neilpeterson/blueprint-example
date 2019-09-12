@@ -17,9 +17,9 @@ jobs:
         with:
           azureManagementGroupName: nepeters-internal
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          blueprintName: actionBlueprintPublish004
+          blueprintName: actionBlueprintPublish005
           blueprintPath: ./create
-          version: v1
+          version: increment
 
       - name: Assign Azure Blueprint 2
         env:
