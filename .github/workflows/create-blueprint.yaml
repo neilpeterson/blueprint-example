@@ -21,7 +21,7 @@ jobs:
           blueprintPath: ./create
           version: v1
 
-      - name: Assign Azure Blueprint
+      - name: Assign Azure Blueprint 2
         env:
           AZURETENANTID: ${{ secrets.AZURETENANTID }}
           AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
