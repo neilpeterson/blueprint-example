@@ -17,20 +17,20 @@ jobs:
         with:
           azureManagementGroupName: nepeters-internal
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          blueprintName: actionBlueprintPublish003
+          blueprintName: actionBlueprintPublish004
           blueprintPath: ./create
           version: v1
 
-      # - name: Assign Azure Blueprint
-      #   env:
-      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
-      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
-      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-      #   uses: neilpeterson/azure-blueprint-actions/assign-blueprint@master
-      #   with:
-      #     AssignmentName: actionBlueprintPublish
-      #     azureManagementGroupName: nepeters-internal
-      #     blueprintName: actionBlueprintPublish
-      #     azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-      #     AssignmentFilePath: ./assign/assign-blueprint.json
+      - name: Assign Azure Blueprint
+        env:
+          AZURETENANTID: ${{ secrets.AZURETENANTID }}
+          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+        uses: neilpeterson/action-assign-blueprint@master
+        with:
+          AssignmentName: actionBlueprintPublish
+          azureManagementGroupName: nepeters-internal
+          blueprintName: actionBlueprintPublish004
+          azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+          AssignmentFilePath: ./assign/assign-blueprint.json
 
