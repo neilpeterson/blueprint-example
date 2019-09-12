@@ -1,4 +1,4 @@
-name: Hello World
+name: Create and Assign Blueprint
 on: [push, pull_request]
 
 jobs:
@@ -15,11 +15,9 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-create-blueprint@master
         with:
-          scope: Subscription
-          azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          blueprintName: actionBlueprintPublish900
+          azureManagementGroupName: nepeters-internal
+          blueprintName: storage-account
           blueprintPath: ./create
-          version: increment
 
       - name: Assign Azure Blueprint 2
         env:
@@ -28,9 +26,8 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-assign-blueprint@master
         with:
-          scope: subscription
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          assignmentName: actionBlueprintPublish900
-          blueprintName: actionBlueprintPublish900
+          assignmentName: storage-account
+          blueprintName: storage-account
           AssignmentFilePath: ./assign/assign-blueprint.json
 
