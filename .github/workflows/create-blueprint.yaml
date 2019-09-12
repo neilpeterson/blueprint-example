@@ -15,6 +15,7 @@ jobs:
           AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
         uses: neilpeterson/action-create-blueprint@master
         with:
+          creationScope: Subscription
           azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
           blueprintName: actionBlueprintPublish002
           blueprintPath: ./create
