@@ -13,18 +13,3 @@ steps:
     BlueprintPath: 'create'
     AlternateLocation: false
     PublishBlueprint: true
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'get-childitem'
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      $items = get-childitem
-      
-      foreach ($item in $item) {
-        write-output $item 
-      }
