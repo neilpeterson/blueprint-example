@@ -13,3 +13,11 @@ steps:
     BlueprintPath: 'create'
     AlternateLocation: false
     PublishBlueprint: true
+
+- task: AssignBlueprint@1
+  inputs:
+    azureSubscription: 'nepeters-internal'
+    AssignmentName: 'blueprints-demo'
+    BlueprintName: 'blueprints-demo'
+    ParametersFile: './assignment/assignment.json'
+    SubscriptionID: '3762d87c-ddb8-425f-b2fc-29e5e859edaf'
