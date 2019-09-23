@@ -6,13 +6,14 @@ pool:
 
 steps:
 
-# - task: CreateBlueprint@1
-#   inputs:
-#     azureSubscription: 'nepeters-internal'
-#     BlueprintName: 'blueprints-demo'
-#     BlueprintPath: 'create'
-#     AlternateLocation: false
-#     PublishBlueprint: true
+- task: CreateBlueprint@1
+  inputs:
+    azureSubscription: 'nepeters-internal'
+    BlueprintName: 'blueprints-demo'
+    BlueprintPath: 'create'
+    AlternateLocation: true
+    AlternateSubscription: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+    PublishBlueprint: true
 
 - task: AssignBlueprint@1
   inputs:
