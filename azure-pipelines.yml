@@ -17,7 +17,7 @@ steps:
 
 - task: AssignBlueprint@1
   inputs:
-    azureSubscription: 'nepeters-internal'
+    azureSubscription: 'nepeters-subscription'
     AssignmentName: 'blueprints-demo'
     BlueprintName: 'blueprints-demo'
     ParametersFile: 'assign/assign-blueprint.json'
