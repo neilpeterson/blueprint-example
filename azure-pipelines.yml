@@ -1,5 +1,5 @@
-# trigger:
-# - master
+trigger:
+- master
 
 pool:
   vmImage: 'windows-2019'
@@ -8,15 +8,18 @@ steps:
 
 - task: CreateBlueprint@1
   inputs:
-    ConnectedServiceName: 'nepeters-internal-managemet-group'
-    BlueprintName: 'blueprints-demo-two'
-    BlueprintPath: './create/blueprint-body.json'
-    ArtifactsPath: './create/artifacts'
+    azureSubscription: 'nepeters-internal'
+    BlueprintName: 'blueprints-demo'
+    BlueprintPath: 'create'
+    AlternateLocation: true
+    AlternateSubscription: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
     PublishBlueprint: true
 
 - task: AssignBlueprint@1
   inputs:
-    ConnectedServiceName: 'nepeters-internal-managemet-group'
-    BlueprintName: 'blueprints-demo-two'
-    ParametersFile: './assign/assign-blueprint.json'
+    azureSubscription: 'nepeters-subscription'
+    AssignmentName: 'blueprints-demo'
+    BlueprintName: 'blueprints-demo'
+    ParametersFile: 'assign/assign-blueprint.json'
     SubscriptionID: '3762d87c-ddb8-425f-b2fc-29e5e859edaf'
+    Wait: true
