@@ -19,16 +19,16 @@ jobs:
           blueprintName: storage-account
           blueprintPath: ./create
 
-      - name: Assign Azure Blueprint
-        uses: neilpeterson/action-assign-blueprint@master
-        env:
-          AZURETENANTID: ${{ secrets.AZURETENANTID }}
-          AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
-          AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
-        with:
-          azureManagementGroupName: nepeters-internal
-          azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
-          assignmentName: storage-account
-          blueprintName: storage-account
-          AssignmentFilePath: ./assign/assign-blueprint.json
+      # - name: Assign Azure Blueprint
+      #   uses: neilpeterson/action-assign-blueprint@master
+      #   env:
+      #     AZURETENANTID: ${{ secrets.AZURETENANTID }}
+      #     AZURECLIENTID: ${{ secrets.AZURECLIENTID }}
+      #     AZUREPASSWORD: ${{ secrets.AZUREPASSWORD }}
+      #   with:
+      #     azureManagementGroupName: nepeters-internal
+      #     azureSubscriptionID: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+      #     assignmentName: storage-account
+      #     blueprintName: storage-account
+      #     AssignmentFilePath: ./assign/assign-blueprint.json
 

@@ -5,7 +5,7 @@
   "location": "eastus",
   "properties": {
     "description": "TWO enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    "blueprintId": "/providers/Microsoft.Management/managementGroups/nepeters-internal/providers/Microsoft.Blueprint/blueprints/actionBlueprintPublish/versions/2",
+    "blueprintId": "/providers/Microsoft.Management/managementGroups/nepeters-internal/providers/Microsoft.Blueprint/blueprints/dev-test-one/versions/7",
     "resourceGroups": {
       "blueprint-demo": {
         "name": "blueprint-demo-two",
