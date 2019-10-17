@@ -13,3 +13,13 @@ steps:
     BlueprintPath: 'create'
     AlternateLocation: false
     PublishBlueprint: true
+
+- task: AssignBlueprint@1
+  inputs:
+    azureSubscription: 'nepeters-internal-two'
+    AssignmentName: 'test-assign-mg'
+    BlueprintName: 'test-assign-mg'
+    ParametersFile: 'assign'
+    SubscriptionID: '3762d87c-ddb8-425f-b2fc-29e5e859edaf'
+    Wait: true
+
