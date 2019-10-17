@@ -9,8 +9,7 @@ steps:
 - task: CreateBlueprint@1
   inputs:
     azureSubscription: 'nepeters-internal'
-    BlueprintName: 'blueprints-demo'
+    BlueprintName: 'test-assign-mg'
     BlueprintPath: 'create'
-    AlternateLocation: true
-    AlternateSubscription: 3762d87c-ddb8-425f-b2fc-29e5e859edaf
+    AlternateLocation: false
     PublishBlueprint: true
