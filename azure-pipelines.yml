@@ -8,7 +8,7 @@ steps:
 
 - task: CreateBlueprint@1
   inputs:
-    azureSubscription: 'nepeters-internal-two'
+    azureSubscription: 'nepeters-internal'
     BlueprintName: 'test-assign-mg'
     BlueprintPath: 'create'
     AlternateLocation: false
@@ -16,7 +16,7 @@ steps:
 
 - task: AssignBlueprint@1
   inputs:
-    azureSubscription: 'nepeters-internal-two'
+    azureSubscription: 'nepeters-internal'
     AssignmentName: 'test-assign-mg'
     BlueprintName: 'test-assign-mg'
     ParametersFile: 'assign'
