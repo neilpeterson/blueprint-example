@@ -8,17 +8,17 @@ steps:
 
 - task: CreateBlueprint@1
   inputs:
-    azureSubscription: 'nepeters-internal-managemet-group'
-    BlueprintName: 'test-assign-mg-two'
+    azureSubscription: 'nepeters-internal-managemet-group-three'
+    BlueprintName: 'test-assign-mg-three'
     BlueprintPath: 'create'
     AlternateLocation: false
     PublishBlueprint: true
 
 - task: AssignBlueprint@1
   inputs:
-    azureSubscription: 'nepeters-internal-managemet-group'
-    AssignmentName: 'test-assign-mg-two'
-    BlueprintName: 'test-assign-mg-two'
+    azureSubscription: 'nepeters-internal-managemet-group-three'
+    AssignmentName: 'test-assign-mg-three'
+    BlueprintName: 'test-assign-mg-three'
     ParametersFile: 'assign/assign-blueprint.json'
     SubscriptionID: '3762d87c-ddb8-425f-b2fc-29e5e859edaf'
     Wait: true
