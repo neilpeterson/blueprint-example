@@ -1,0 +1,12 @@
+{
+    "properties": {
+        "description": "Azure Pipelines Demo.",
+        "targetScope": "subscription",
+        "parameters": { },
+        "resourceGroups": {
+            "blueprint-demo": {
+                "description": "Contains the resource template deployment and a role assignment."
+            }
+        }
+    }
+}
