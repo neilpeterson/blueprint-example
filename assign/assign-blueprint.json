@@ -5,7 +5,6 @@
   "location": "eastus",
   "properties": {
     "description": "TWO enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    "blueprintId": "",
     "resourceGroups": {
       "blueprint-demo": {
         "name": "blueprint-demo-two",
