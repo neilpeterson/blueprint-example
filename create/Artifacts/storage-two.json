@@ -13,7 +13,7 @@
 			},
 			"resources": [{
 				"type": "Microsoft.Storage/storageAccounts",
-				"name": "[variables('storageAccountName')]",
+				"name": "[variables('storageAccountNameFAIL')]",
 				"location": "[variables('location')]",
 				"apiVersion": "2018-07-01",
 				"sku": {
