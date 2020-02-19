@@ -6,7 +6,7 @@
 			"contentVersion": "1.0.0.0",
 			"parameters": {},
 			"variables": {
-				"storageAccountName": "[concat('store2', uniquestring(resourceGroup().id))]",
+				"storageAccountName": "[concat('child', uniquestring(resourceGroup().id))]",
 				"storageAccountNameFAIL": "INVALIDNAME-01",
 				"storageAccountType": "Standard_LRS",
 				"location": "[resourceGroup().location]"
