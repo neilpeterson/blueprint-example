@@ -7,7 +7,6 @@
 			"parameters": {},
 			"variables": {
 				"storageAccountName": "[concat('child', uniquestring(resourceGroup().id))]",
-				"storageAccountNameFAIL": "INVALIDNAME-01",
 				"storageAccountType": "Standard_LRS",
 				"location": "[resourceGroup().location]"
 			},
@@ -29,7 +28,7 @@
 				}
 			}
 		},
-		"resourceGroup": "blueprint-demo",
+		"resourceGroup": "blueprint-demo-two",
 		"parameters": {}
 	}
 }
