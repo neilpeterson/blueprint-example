@@ -28,7 +28,7 @@
 				}
 			}
 		},
-		"resourceGroup": "blueprint-demo-two",
+		"resourceGroup": "blueprint-demo",
 		"parameters": {}
 	}
 }
